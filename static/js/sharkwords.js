@@ -47,8 +47,9 @@ const generateLetterButtons = (ALPHABET) => {
 //
 // `buttonEl` is an `HTMLElement` object.
 //
+// button = <button disabled>letter</button>
 const disableLetterButton = (buttonEl) => {
-  // Replace this with your code
+  buttonEl.disabled = true;
 };
 
 // This is a helper function we will use in the future
@@ -56,7 +57,8 @@ const disableLetterButton = (buttonEl) => {
 // For now, you should test it out to make sure it works
 
 const isLetterInWord = (letter) => {
-  // Replace this with your code
+  const letterDiv = document.querySelector(`div.${letter}`);
+  return letterDiv !== null;
 };
 
 // This is like if __name__ == '__main__' in Python
